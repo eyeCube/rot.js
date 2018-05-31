@@ -1,6 +1,8 @@
 /*
 	This is rot.js, the ROguelike Toolkit in JavaScript.
-	Version 0.7~dev, generated on Thu May 17 14:29:02 CEST 2018.
+	Version 0.7~dev, generated on Thu May 17 14:29:02 CEST 2018.*
+    *Modified by Jacob Wharton 5-31-18:
+        - added ROT.Display.prototype.getContext()
 */
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
@@ -818,6 +820,15 @@ ROT.Display.prototype.getOptions = function() {
  */
 ROT.Display.prototype.getContainer = function() {
 	return this._context.canvas;
+};
+
+/**
+* Returns the context of the canvas
+* @returns {context} HTML canvas 2d context
+* ADDED BY JACOB WHARTON
+*/
+ROT.Display.prototype.getContext = function () {
+return this._context;
 };
 
 /**
